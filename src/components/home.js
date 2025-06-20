@@ -68,10 +68,10 @@ export const Home = () => {
               </p>
             </Col>
                < Specials data-aos="fade-up"/>
-          </Row>
-          <div className="text-center mt-5">
+               <div className="text-center mt-5">
             <Dishes data-aos="fade-up" />
           </div>
+          </Row>
         </Container>
       </section>
 
