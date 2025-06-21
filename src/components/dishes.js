@@ -223,7 +223,7 @@ export const Dishes = () => {
                     }}>
                       {cat.name}
                     </h3>
-                    <span style={{ fontSize: "1.2rem" }}>
+                    <span style={{ fontSize: "1rem" }}>
                       {expandedCategories[cat.id] ? "−" : "+"}
                     </span>
                   </div>
@@ -293,34 +293,8 @@ export const Dishes = () => {
                   Welcome to Our Restaurant
                 </h3>
                 <p className="lead" style={{ color: "#6c757d" }}>
-                  Please select a menu category to explore our culinary offerings
+                  Please select a menu category above to explore our culinary offerings
                 </p>
-                <div className="d-flex justify-content-center mt-4">
-                  <Button
-                    variant="outline-primary"
-                    className="mx-2"
-                    onClick={() => handleCategoryClick('Food')}
-                    style={{
-                      borderColor: "#ba4e07",
-                      color: "#ba4e07",
-                      fontWeight: 500
-                    }}
-                  >
-                    View Food Menu
-                  </Button>
-                  <Button
-                    variant="outline-primary"
-                    className="mx-2"
-                    onClick={() => handleCategoryClick('Drinks')}
-                    style={{
-                      borderColor: "#ba4e07",
-                      color: "#ba4e07",
-                      fontWeight: 500
-                    }}
-                  >
-                    View Drinks Menu
-                  </Button>
-                </div>
               </div>
             </Col>
           </Row>
