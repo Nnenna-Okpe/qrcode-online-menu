@@ -39,23 +39,27 @@ export const Specials = () => {
     {
       id: "special3",
       name: "Chicken Alfredo",
-      img: "images/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg",
+      img: "/images/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg",
       price: "$14.99",
       description: "Creamy egg salad made with boiled eggs and light seasoning.",
     },
   ];
 
   return (
-    <div className="specials-container py-5">
+    
       <Container>
         {isMobile ? (
           <Carousel interval={4000} fade>
             {specialMenu.map((item) => (
               <Carousel.Item key={item.id}>
-                <Card className="shadow-sm border-0 rounded bg-white text-dark text-center p-3">
-                  <Card.Img variant="top" src={item.img} style={{ maxHeight: '280px', objectFit: 'cover' }} />
+                <Card className="shadow border-0 rounded bg-white text-dark text-center p-3">
+                  <Card.Img 
+                    variant="top" 
+                    src={item.img} 
+                    style={{ maxHeight: '280px', objectFit: 'cover' }} 
+                  />
                   <Card.Body>
-                    <Card.Title>{item.name}</Card.Title>
+                    <Card.Title className="h5">{item.name}</Card.Title>
                     <Card.Text>{item.description}</Card.Text>
                     <Card.Text className="badge bg-primary rounded-pill">{item.price}</Card.Text>
                   </Card.Body>
@@ -67,10 +71,15 @@ export const Specials = () => {
           <Row>
             {specialMenu.map((item) => (
               <Col key={item.id} md={4} className="mb-4" data-aos="fade-up">
-                <Card className="shadow-sm border-0 rounded bg-white text-dark">
+                <Card className="shadow border-0 rounded bg-white text-dark">
+                  <Card.Img 
+                    variant="top" 
+                    src={item.img} 
+                    className="mb-3" 
+                    style={{ maxHeight: '280px', objectFit: 'cover' }} 
+                  />
                   <Card.Body>
-                    <Card.Img variant="top" src={item.img} className="mb-3" style={{ maxHeight: '280px', objectFit: 'cover' }} />
-                    <Card.Title>{item.name}</Card.Title>
+                    <Card.Title className="h5">{item.name}</Card.Title>
                     <Card.Text>{item.description}</Card.Text>
                     <Card.Text className="badge bg-primary rounded-pill">{item.price}</Card.Text>
                   </Card.Body>
@@ -80,6 +89,6 @@ export const Specials = () => {
           </Row>
         )}
       </Container>
-    </div>
+
   );
 };

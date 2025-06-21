@@ -56,7 +56,7 @@ export const Home = () => {
       </div>
 
       {/* Featured Section */}
-      <section className="py-5" id="menu" style={{ backgroundColor: "rgba(248, 249, 250, 1)" }}>
+      <section className="py-5" id="menu" >
         <Container>
           <Row className="mb-5 text-center">
             <Col>
@@ -68,9 +68,7 @@ export const Home = () => {
               </p>
             </Col>
                < Specials data-aos="fade-up"/>
-               <div className="text-center mt-5">
             <Dishes data-aos="fade-up" />
-          </div>
           </Row>
         </Container>
       </section>
