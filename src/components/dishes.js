@@ -143,7 +143,7 @@ export const Dishes = () => {
                     <h3 className="mb-0" style={{ 
                       fontFamily: "'Playfair Display', serif",
                       color: "#343a40",
-                      fontSize: "1.8rem"
+                      fontSize: "1.6rem"
                     }}>
                       {cat.name}
                     </h3>
@@ -219,11 +219,11 @@ export const Dishes = () => {
                     <h3 className="mb-0" style={{ 
                       fontFamily: "'Playfair Display', serif",
                       color: "#343a40",
-                      fontSize: "1.8rem"
+                      fontSize: "1.6rem"
                     }}>
                       {cat.name}
                     </h3>
-                    <span style={{ fontSize: "1rem" }}>
+                    <span style={{ fontSize: "1.2rem" }}>
                       {expandedCategories[cat.id] ? "−" : "+"}
                     </span>
                   </div>
