@@ -1,8 +1,8 @@
 import './App.css';
-import { Dishes } from './components/dishes';
 import { Home } from './components/home';
-import {Specials} from './components/specials';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Admin } from './components/admin';
 const backgroundImage = 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';
 
 function App() {
@@ -18,8 +18,12 @@ function App() {
           backgroundAttachment: "fixed",
       }}
       >
-        
-      <Home />
+      <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
+    </Router>
     </div>
   );
 }

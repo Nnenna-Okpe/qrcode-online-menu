@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css"
 import { Container, Row, Col, Button } from "react-bootstrap"
 import "aos/dist/aos.css";
 import AOS from "aos";

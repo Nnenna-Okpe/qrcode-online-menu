@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, Button, Container, Row, Col, Collapse } from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import {Button, Container, Row, Col, Collapse } from "react-bootstrap";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
@@ -153,7 +151,7 @@ export const Dishes = () => {
                   </div>
                   <Collapse in={expandedCategories[cat.id]}>
                     <div>
-                      {cat.items.map((item) => (
+                      {expandedCategories[cat.id] && cat.items.map((item) => (
                         <div key={item.id} className="menu-item mb-3" style={{
                           padding: "20px",
                           backgroundColor: "rgba(255, 255, 255, 0.8)",
@@ -228,8 +226,8 @@ export const Dishes = () => {
                     </span>
                   </div>
                   <Collapse in={expandedCategories[cat.id]}>
-                    <div>
-                      {cat.items.map((item) => (
+                    <div> 
+                      {expandedCategories[cat.id] && cat.items.map((item) => (
                         <div key={item.id} className="menu-item mb-3" style={{
                           padding: "20px",
                           backgroundColor: "rgba(255, 255, 255, 0.8)",
