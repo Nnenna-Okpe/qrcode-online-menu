@@ -94,9 +94,11 @@ export const Specials = () => {
                 </Card>
               </Col>
             ))}
-            <Dishes />
+          
           </Row>
+         
         )}
+           <Dishes />
           <style
         dangerouslySetInnerHTML={{
           __html: `
