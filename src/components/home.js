@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import { Specials } from './specials';
 import { useNavigate } from 'react-router-dom';
+import { Dishes } from "./dishes";
 
 const backgroundImage = "/images/victoria-shes-UC0HZdUitWY-unsplash.jpg"
 
@@ -53,7 +54,7 @@ export const Home = () => {
             Experience the art of fine dining with our exquisite menu crafted by award-winning chefs
           </p>
             <div className="d-flex gap-3 animate__animated animate__fadeInUp">
-             <Button onClick={() => navigate('/specials')} variant="primary" size="lg" className="px-4 py-3">      
+             <Button onClick={() => navigate('/home')} variant="primary" size="lg" className="px-4 py-3">      
                View Our Menu
              </Button>
              <Button  onClick={() => navigate('/event')} variant="outline-light" size="lg" className="px-4 py-3">
@@ -76,6 +77,7 @@ export const Home = () => {
               </p>
             </Col>
                < Specials data-aos="fade-up"/>
+                < Dishes data-aos="fade-up"/>
           </Row>
         </Container>
       </section>
