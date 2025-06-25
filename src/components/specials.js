@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Card, Container, Row, Col, Carousel } from "react-bootstrap";
+import { Card, Container, Row, Col, Button, Carousel } from "react-bootstrap";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import { Dishes } from "./dishes";
 
 export const Specials = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -46,6 +47,21 @@ export const Specials = () => {
   return (
     
       <Container>
+          <section className="py-5" id="menu" >
+                <Container>
+                  <Row className="mb-5 text-center">
+                    <Col>
+                      <p className="text-primary fw-bold mb-2" data-aos="fade-up">SIGNATURE DISHES</p>
+                      <h2 className="display-5 fw-bold mb-4" data-aos="fade-up">Our Menu Highlights</h2>
+                      <p className="lead mb-5" data-aos="fade-up" style={{ maxWidth: "700px", margin: "0 auto" }}>
+                        Discover our chef's selection of exquisite dishes that blend traditional flavors with modern culinary
+                        techniques
+                      </p>
+                    </Col>
+                       < Specials data-aos="fade-up"/>
+                  </Row>
+                </Container>
+              </section>
         {isMobile ? (
           <Carousel interval={4000} fade>
             {specialMenu.map((item) => (
@@ -84,6 +100,7 @@ export const Specials = () => {
                 </Card>
               </Col>
             ))}
+            <Dishes data-aos="fade-up" />
           </Row>
         )}
       </Container>

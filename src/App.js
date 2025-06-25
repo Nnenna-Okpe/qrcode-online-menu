@@ -3,6 +3,9 @@ import { Home } from './components/home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Admin } from './components/admin';
+import { EventPage } from './components/event';
+import { Specials } from './components/specials';
+
 const backgroundImage = 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';
 
 function App() {
@@ -22,6 +25,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/event" element={<EventPage />} />
+        <Route path="/specials" element={<Specials />} />
       </Routes>
     </Router>
     </div>

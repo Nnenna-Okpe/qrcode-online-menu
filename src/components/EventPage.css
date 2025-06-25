@@ -1,0 +1,31 @@
+.event-page {
+    background: linear-gradient(to bottom right, #ff6f61, #ffcc61);
+    color: #333;
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    border-bottom: 5px solid #ff6f61;
+}
+
+.list-group-item {
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+}
+
+.list-group-item:hover {
+    background-color: #ffcc61;
+    color: #333;
+    cursor: pointer;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
