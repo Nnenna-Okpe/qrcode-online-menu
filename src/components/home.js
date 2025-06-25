@@ -54,7 +54,7 @@ export const Home = () => {
             Experience the art of fine dining with our exquisite menu crafted by award-winning chefs
           </p>
             <div className="d-flex gap-3 animate__animated animate__fadeInUp">
-             <Button onClick={() => navigate('/home')} variant="primary" size="lg" className="px-4 py-3">      
+             <Button onClick={() => navigate('/specials')} variant="primary" size="lg" className="px-4 py-3">      
                View Our Menu
              </Button>
              <Button  onClick={() => navigate('/event')} variant="outline-light" size="lg" className="px-4 py-3">
@@ -64,23 +64,6 @@ export const Home = () => {
         </Container>
       </div>
 
-      {/* Featured Section */}
-      <section className="py-5" id="menu" >
-        <Container>
-          <Row className="mb-5 text-center">
-            <Col>
-              <p className="text-primary fw-bold mb-2" data-aos="fade-up">SIGNATURE DISHES</p>
-              <h2 className="display-5 fw-bold mb-4" data-aos="fade-up">Our Menu Highlights</h2>
-              <p className="lead mb-5" data-aos="fade-up" style={{ maxWidth: "700px", margin: "0 auto" }}>
-                Discover our chef's selection of exquisite dishes that blend traditional flavors with modern culinary
-                techniques
-              </p>
-            </Col>
-               < Specials data-aos="fade-up"/>
-                < Dishes data-aos="fade-up"/>
-          </Row>
-        </Container>
-      </section>
 
 
       {/* Custom CSS */}

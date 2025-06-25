@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 
 export const Dishes = () => {
-  const [category, setCategory] = useState("Food");
+  const [category, setCategory] = useState("");
   const [expandedCategories, setExpandedCategories] = useState({});
   const [activeButton, setActiveButton] = useState("Food");
   const [foodMenu, setFoodMenu] = useState([]);

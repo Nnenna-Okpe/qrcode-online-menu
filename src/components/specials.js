@@ -47,6 +47,14 @@ export const Specials = () => {
   return (
     
       <Container>
+        <Col className="text-center">
+          <p className="text-primary fw-bold mb-2" data-aos="fade-up">SIGNATURE DISHES</p>
+          <h2 className="display-5 fw-bold mb-4" data-aos="fade-up">Our Menu Highlights</h2>
+          <p className="lead mb-5" data-aos="fade-up" style={{ maxWidth: "700px", margin: "0 auto" }}>
+           Discover our chef's selection of exquisite dishes that blend traditional flavors with modern culinary
+           techniques
+          </p>
+        </Col>
         {isMobile ? (
           <Carousel interval={4000} fade>
             {specialMenu.map((item) => (
@@ -68,6 +76,7 @@ export const Specials = () => {
           </Carousel>
         ) : (
           <Row>
+              
             {specialMenu.map((item) => (
               <Col key={item.id} md={4} className="mb-4" data-aos="fade-up">
                 <Card className="shadow border-0 rounded bg-white text-dark">
@@ -85,8 +94,50 @@ export const Specials = () => {
                 </Card>
               </Col>
             ))}
+            <Dishes />
           </Row>
         )}
+          <style
+        dangerouslySetInnerHTML={{
+          __html: `
+          .btn-primary {
+            background-color: #d4a373;
+            border-color: #d4a373;
+          }
+          
+          .btn-primary:hover {
+            background-color: #c49a6c;
+            border-color: #c49a6c;
+          }
+          
+          .btn-outline-primary {
+            color: #d4a373;
+            border-color: #d4a373;
+          }
+          
+          .btn-outline-primary:hover {
+            background-color: #d4a373;
+            border-color: #d4a373;
+          }
+          
+          .text-primary {
+            color: #d4a373 !important;
+          }
+          
+          .bg-primary {
+            background-color: #d4a373 !important;
+          }
+          
+          .card {
+            transition: transform 0.3s ease;
+          }
+          
+          .card:hover {
+            transform: translateY(-10px);
+          }
+        `,
+        }}
+      />
       </Container>
 
   );
